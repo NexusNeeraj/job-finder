@@ -1,12 +1,12 @@
-require('dotenv').config();
-const express = require('express');
-const app = express();
+import dotenv from 'dotenv';
+import connectDB from './config/db.js';
+import app from './app.js';
+
+// load environment variables
+dotenv.config();
+connectDB();
 const port = process.env.PORT || 5000;
 
-
-app.get('/', (req, res) => {
-  res.send('Hello Express!');
-});
 
 // start the server
 app.listen(port, () => {
