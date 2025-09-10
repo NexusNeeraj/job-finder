@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:3000/api", // backend base url
+  baseURL: "https://job-finder-4sh7.onrender.com/api", // backend base url
 });
 
 export const fetchJobs = (filters) => API.get("/jobs", { params: filters });
